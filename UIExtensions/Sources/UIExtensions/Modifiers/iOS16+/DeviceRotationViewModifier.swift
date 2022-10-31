@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct DeviceRotationViewModifier: ViewModifier {
-    let action: (UIDeviceOrientation) -> Void
+public struct DeviceRotationViewModifier: ViewModifier {
+    public let action: (UIDeviceOrientation) -> Void
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
                 action(UIDevice.current.orientation)
