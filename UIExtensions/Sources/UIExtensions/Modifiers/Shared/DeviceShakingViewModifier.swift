@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// A view modifier that detects shaking and calls a function of our choosing.
+/// A view modifier that detects when a device is shaked
 public struct DeviceShakeViewModifier: ViewModifier {
     private let action: () -> Void
     init(action: @escaping () -> Void) {

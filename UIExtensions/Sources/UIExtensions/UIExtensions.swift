@@ -1,8 +1,9 @@
 import SwiftUI
 
 public extension View {
+    @available(macOS, unavailable, message: "This extension is not av available on iOS & iPadOS")
     func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
-        self.modifier(DeviceRotationViewModifier(action: action))
+        self.modifier(DeviceRotationViewModifier(action: action)) 
     }
 
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
